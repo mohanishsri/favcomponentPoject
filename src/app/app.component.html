@@ -1,0 +1,38 @@
+<course>
+    
+</course>
+<br>
+<zippy title="Shipping Details">
+        Shipping Details Content
+      </zippy>
+<input type="text" [appInputFormat]="'lowercase1'"/>
+<ul class="nav nav-pills">
+    <li [class.active]="viewMode=='Map'"><a (click)="viewMode='Map'">Map View</a></li>
+    <li [class.active]="viewMode=='List'"><a (click)="viewMode='List'">List View</a></li>
+    <li></li>
+</ul>
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'Map'">map View Content</div>
+    <div *ngSwitchCase="'List'">List View Content</div>
+    <div *ngSwitchDefault>Otherwise</div>
+</div>
+<button (click)="loadcourses()">Load courses</button>
+<button (click) = "onAdd()">Add</button>
+<ul>
+    <li *ngFor="let c of courses; index as i; even as Iseven; trackBy: trackCourse">
+        {{i}} - {{c.name}} - {{Iseven}}
+        <button (click) = "onRemove(c)">Remove</button>
+    </li>
+</ul>   
+<app-bootstrappanel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+        <p>some content here....</p>
+    </div>
+</app-bootstrappanel>
+<favorite [isfavourite]="post.isFavourite" (change)="onchangeraiseevent($event)"></favorite>
+<input type="text" [(ngModel)] = "title">
+<br>
+{{title|propercase}}
+{{title|propernewcase}}
