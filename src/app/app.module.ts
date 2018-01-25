@@ -11,6 +11,7 @@ import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
 import { CourseComponent } from './course/course.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     BootstrappanelComponent,
     InputFormatDirective,
     ZippyComponent,
-    CourseComponent
+    CourseComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
